@@ -82,8 +82,9 @@ public class AppServices implements InfAppServices  {
 		 User user = entityManager.find(User.class,collec.getUser().getId());		 
 		 Set<Collection> list = user.getCollections();  
 		 
+		 
 		 for (Collection c : list) {
-			if(list.contains(c)){
+			if(c.equals(collec)){
 				list.remove(c);
 				break; 
 			}

@@ -1,3 +1,7 @@
+
+
+
+
 package com.book.test;
 
 import java.util.ArrayList;
@@ -71,20 +75,27 @@ public class CollectionServicesTest {
      public void  removeCollection(){
     	  User user = MockHelper.mockUser("User Test",MockHelper.TEST_USER_EMAIL);     	 
     	  Collection collection = MockHelper.mockCollection("Collection test");
-    	  user.getCollections().add(collection);  
+    	  Collection collection2 = MockHelper.mockCollection("Collection test 2");
+    	  user.getCollections().add(collection); 
+    	  user.getCollections().add(collection2);
     	  collection.setUser(user); 
+    	  collection2.setUser(user); 
+    	  
     	  
     	  service.signUpUser(user);
     	  
-    	  Assert.assertEquals(1,user.getCollections().size());
+    	  Assert.assertEquals(2,user.getCollections().size());
     	
     	  //service.remove(Collection.class,collection.getId()); 
 		  service.removeCollection(collection.getId()); 
 		  
 		  User result = service.find(User.class, user.getId()); 
+		  
+		  //Assert.assertEquals(1,result.getCollections().size());
+	    	
 		  Assert.assertNotNull(user); 	
 		  Set<Collection> list = result.getCollections();  		  
-		  Assert.assertEquals(0,list.size()); 
+		  Assert.assertEquals(1,list.size()); 
 		  
 		  
 		  Collection ressultC = service.find(Collection.class, collection.getId()); 
@@ -100,7 +111,7 @@ public class CollectionServicesTest {
     	  user.getCollections().add(collection);  
     	  collection.setUser(user); 
     	  
-    	  service.signUpUser(user);
+    	  service.signUpUser(user); 
     	  
     	  
     	  Collection editedCollection = new Collection(); 
