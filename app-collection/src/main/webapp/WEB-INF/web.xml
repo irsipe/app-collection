@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <display-name>Simple Servlet Application</display-name>
-  <servlet>
-    <servlet-name>ServletBook</servlet-name>
-    <servlet-class>com.book.app.servlet.ServletBook</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletBook</servlet-name>
-    <url-pattern>/servlet/book</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>ServletEditBook</servlet-name>
-    <servlet-class>com.book.app.servlet.ServletEditBook</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletEditBook</servlet-name>
-    <url-pattern>/servlet/edit</url-pattern>
-  </servlet-mapping>
+ 
+  
   <servlet>
     <servlet-name>ServletEditImage</servlet-name>
     <servlet-class>com.book.app.servlet.ServletEditImage</servlet-class>

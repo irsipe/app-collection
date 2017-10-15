@@ -20,7 +20,7 @@ import entities.Image;
  *
  */
 
-public class ServiceImageTest { 
+public class ImageServicesTest { 
 
 	
 	@EJB

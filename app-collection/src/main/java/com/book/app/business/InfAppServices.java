@@ -27,9 +27,12 @@ public interface InfAppServices {
 	public void updateCollection(Collection collection); 
 	
 	public void addItem(String collectionId, Item item,byte[] bytes);
-	public void addImage(String itemId, Image image);	
+	
 	public void updateItem(Item item, byte[] bytes); 
 	public void removeItem(String  itemId); 
+	
+	@Deprecated
+	public void addImage(String itemId, Image image);	
 	
 	/* for test */ 
 	

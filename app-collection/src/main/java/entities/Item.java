@@ -27,7 +27,7 @@ public class Item {
 	private String author; 
     private String description; 
     private String title;
-    
+   
     
     
     @ManyToOne
@@ -36,7 +36,9 @@ public class Item {
   
     @OneToOne(cascade={CascadeType.PERSIST,CascadeType.REMOVE},
 			optional=false)
-    Image image; 
+    Image image;
+	 
+	
     
     
     
@@ -76,5 +78,22 @@ public class Item {
                 ", bookTitle='" + title + '\'' +
                 '}';
     }
+
+	public void setCollection(Collection col) {
+		// TODO Auto-generated method stub
+		this.collection=col;
+		
+	}
+
+	public void setImage(Image image2) {
+		// TODO Auto-generated method stub
+		this.image=image2;
+		
+	}
+
+	public void setId(String id) {
+		// TODO Auto-generated method stub
+		this.bookId=id;
+	}
 }
 
