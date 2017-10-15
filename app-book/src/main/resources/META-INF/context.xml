@@ -1,7 +1,0 @@
-<Context>
-    <Resource name="db_datasource" type="javax.sql.DataSource"
-              username="root" password=""
-              driverClassName="com.mysql.jdbc.Driver" 
-              url="jdbc:mysql://localhost:3306/dbtest"
-            />
-</Context>
